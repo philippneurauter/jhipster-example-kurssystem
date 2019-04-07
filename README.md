@@ -6,6 +6,41 @@ This application was generated using JHipster 5.8.2, you can find documentation 
 
 ![db structure diagram](https://raw.githubusercontent.com/philippneurauter/jhipster-example-kurssystem/master/jhipster-jdl.png "JHipster DB Structure")
 
+```code
+entity Lehrer {
+    lehrername String required,
+    geburtsdatum LocalDate,
+    faecher String,
+    vorstand String
+}
+
+entity Kurs {
+    kursname String required,
+    kursart String required,
+    kurseinheit Double,
+    kurskapazitaet String
+}
+
+entity Schueler {
+    schuelername String required,
+    klasse String,
+    geburtsdatum LocalDate
+}
+
+relationship OneToMany {
+	Lehrer{lehrername} to Kurs{lehrer(lehrername)},
+}
+
+relationship ManyToMany {
+	Schueler{kurs(kursname)} to Kurs{kursname},
+}
+
+
+paginate Kurs with pagination
+
+service all with serviceImpl
+
+```
 
 ## Development
 
