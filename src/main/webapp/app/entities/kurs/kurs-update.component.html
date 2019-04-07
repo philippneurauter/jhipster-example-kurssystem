@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-kurs-heading" jhiTranslate="kurssystemImstApp.kurs.home.createOrEditLabel">Create or edit a Kurs</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!kurs.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="kurs.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.kurs.kursname" for="field_kursname">Kursname</label>
+                    <input type="text" class="form-control" name="kursname" id="field_kursname"
+                        [(ngModel)]="kurs.kursname" required/>
+                    <div [hidden]="!(editForm.controls.kursname?.dirty && editForm.controls.kursname?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.kursname?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.kurs.kursart" for="field_kursart">Kursart</label>
+                    <input type="text" class="form-control" name="kursart" id="field_kursart"
+                        [(ngModel)]="kurs.kursart" required/>
+                    <div [hidden]="!(editForm.controls.kursart?.dirty && editForm.controls.kursart?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.kursart?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.kurs.kurseinheit" for="field_kurseinheit">Kurseinheit</label>
+                    <input type="number" class="form-control" name="kurseinheit" id="field_kurseinheit"
+                        [(ngModel)]="kurs.kurseinheit" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.kurs.kurskapazitaet" for="field_kurskapazitaet">Kurskapazitaet</label>
+                    <input type="text" class="form-control" name="kurskapazitaet" id="field_kurskapazitaet"
+                        [(ngModel)]="kurs.kurskapazitaet" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.kurs.lehrer" for="field_lehrer">Lehrer</label>
+                    <select class="form-control" id="field_lehrer" name="lehrer" [(ngModel)]="kurs.lehrer" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="lehrerOption.id === kurs.lehrer?.id ? kurs.lehrer : lehrerOption" *ngFor="let lehrerOption of lehrers; trackBy: trackLehrerById">{{lehrerOption.lehrername}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

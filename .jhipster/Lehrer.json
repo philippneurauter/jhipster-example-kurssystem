@@ -1,0 +1,41 @@
+{
+    "name": "Lehrer",
+    "fields": [
+        {
+            "fieldName": "lehrername",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "geburtsdatum",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "faecher",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "vorstand",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "kurs",
+            "otherEntityRelationshipName": "lehrer",
+            "relationshipName": "lehrername"
+        }
+    ],
+    "changelogDate": "20190407134445",
+    "entityTableName": "lehrer",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

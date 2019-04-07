@@ -1,0 +1,53 @@
+{
+    "name": "Kurs",
+    "fields": [
+        {
+            "fieldName": "kursname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "kursart",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "kurseinheit",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "kurskapazitaet",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "lehrer",
+            "otherEntityRelationshipName": "lehrername",
+            "relationshipName": "lehrer",
+            "otherEntityField": "lehrername"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "schueler",
+            "otherEntityRelationshipName": "kurs",
+            "relationshipName": "kursname",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190407134446",
+    "entityTableName": "kurs",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

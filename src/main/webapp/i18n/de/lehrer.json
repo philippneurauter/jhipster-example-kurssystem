@@ -1,0 +1,25 @@
+{
+    "kurssystemImstApp": {
+        "lehrer": {
+            "home": {
+                "title": "Lehrers",
+                "createLabel": "Lehrer erstellen",
+                "createOrEditLabel": "Lehrer erstellen oder bearbeiten"
+            },
+            "created": "Lehrer erstellt mit ID {{ param }}",
+            "updated": "Lehrer aktualisiert mit ID {{ param }}",
+            "deleted": "Lehrer gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Lehrer {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Lehrer"
+            },
+            "lehrername": "Lehrername",
+            "geburtsdatum": "Geburtsdatum",
+            "faecher": "Faecher",
+            "vorstand": "Vorstand",
+            "lehrername": "Lehrername"
+        }
+    }
+}

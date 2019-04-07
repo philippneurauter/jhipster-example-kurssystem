@@ -1,0 +1,25 @@
+{
+    "kurssystemImstApp": {
+        "lehrer": {
+            "home": {
+                "title": "Lehrers",
+                "createLabel": "Create a new Lehrer",
+                "createOrEditLabel": "Create or edit a Lehrer"
+            },
+            "created": "A new Lehrer is created with identifier {{ param }}",
+            "updated": "A Lehrer is updated with identifier {{ param }}",
+            "deleted": "A Lehrer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Lehrer {{ id }}?"
+            },
+            "detail": {
+                "title": "Lehrer"
+            },
+            "lehrername": "Lehrername",
+            "geburtsdatum": "Geburtsdatum",
+            "faecher": "Faecher",
+            "vorstand": "Vorstand",
+            "lehrername": "Lehrername"
+        }
+    }
+}

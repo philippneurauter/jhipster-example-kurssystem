@@ -1,0 +1,11 @@
+version: '2'
+services:
+    kurssystemimst-postgresql:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/jhipster/KurssystemImst/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=KurssystemImst
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

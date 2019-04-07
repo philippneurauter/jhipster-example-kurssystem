@@ -1,0 +1,24 @@
+{
+    "kurssystemImstApp": {
+        "schueler": {
+            "home": {
+                "title": "Schuelers",
+                "createLabel": "Create a new Schueler",
+                "createOrEditLabel": "Create or edit a Schueler"
+            },
+            "created": "A new Schueler is created with identifier {{ param }}",
+            "updated": "A Schueler is updated with identifier {{ param }}",
+            "deleted": "A Schueler is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Schueler {{ id }}?"
+            },
+            "detail": {
+                "title": "Schueler"
+            },
+            "schuelername": "Schuelername",
+            "klasse": "Klasse",
+            "geburtsdatum": "Geburtsdatum",
+            "kurs": "Kurs"
+        }
+    }
+}

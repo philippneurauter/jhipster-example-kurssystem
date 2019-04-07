@@ -1,0 +1,38 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "at.hakimst.kurssystemimst",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "KurssystemImst",
+        "packageName": "at.hakimst.kurssystemimst",
+        "packageFolder": "at/hakimst/kurssystemimst",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "h2Disk",
+        "prodDatabaseType": "postgresql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "ZDdmMjdlOWFjNzNhN2Q5ZjVkZWZiMGFhNGE0NDg1YjhlZjA1NTE1NDFjYzA0ZTgxNDIxNGJlZmY3YWJiMjI4YTBlNzlkM2UyM2RiNWVkMjJjNDMzMjhjNzZkMjBlNDc1OWZkNWQ3ZmEwOGEwY2UyNTRhMDZiODhlZjA0M2I4Y2E=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": ["protractor"],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en", "de"]
+    }
+}

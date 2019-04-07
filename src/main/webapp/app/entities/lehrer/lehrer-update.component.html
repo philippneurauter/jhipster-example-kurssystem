@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-lehrer-heading" jhiTranslate="kurssystemImstApp.lehrer.home.createOrEditLabel">Create or edit a Lehrer</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!lehrer.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="lehrer.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.lehrer.lehrername" for="field_lehrername">Lehrername</label>
+                    <input type="text" class="form-control" name="lehrername" id="field_lehrername"
+                        [(ngModel)]="lehrer.lehrername" required/>
+                    <div [hidden]="!(editForm.controls.lehrername?.dirty && editForm.controls.lehrername?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.lehrername?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.lehrer.geburtsdatum" for="field_geburtsdatum">Geburtsdatum</label>
+                    <div class="input-group">
+                        <input id="field_geburtsdatum" type="text" class="form-control" name="geburtsdatum" ngbDatepicker  #geburtsdatumDp="ngbDatepicker" [(ngModel)]="lehrer.geburtsdatum"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="geburtsdatumDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.lehrer.faecher" for="field_faecher">Faecher</label>
+                    <input type="text" class="form-control" name="faecher" id="field_faecher"
+                        [(ngModel)]="lehrer.faecher" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="kurssystemImstApp.lehrer.vorstand" for="field_vorstand">Vorstand</label>
+                    <input type="text" class="form-control" name="vorstand" id="field_vorstand"
+                        [(ngModel)]="lehrer.vorstand" />
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

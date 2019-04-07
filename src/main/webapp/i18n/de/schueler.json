@@ -1,0 +1,24 @@
+{
+    "kurssystemImstApp": {
+        "schueler": {
+            "home": {
+                "title": "Schuelers",
+                "createLabel": "Schueler erstellen",
+                "createOrEditLabel": "Schueler erstellen oder bearbeiten"
+            },
+            "created": "Schueler erstellt mit ID {{ param }}",
+            "updated": "Schueler aktualisiert mit ID {{ param }}",
+            "deleted": "Schueler gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Schueler {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Schueler"
+            },
+            "schuelername": "Schuelername",
+            "klasse": "Klasse",
+            "geburtsdatum": "Geburtsdatum",
+            "kurs": "Kurs"
+        }
+    }
+}

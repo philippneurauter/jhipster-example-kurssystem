@@ -1,0 +1,39 @@
+{
+    "name": "Schueler",
+    "fields": [
+        {
+            "fieldName": "schuelername",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "klasse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "geburtsdatum",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "kurs",
+            "otherEntityRelationshipName": "kursname",
+            "relationshipName": "kurs",
+            "otherEntityField": "kursname",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190407134447",
+    "entityTableName": "schueler",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
