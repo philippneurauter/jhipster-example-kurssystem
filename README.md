@@ -1,6 +1,11 @@
-# KurssystemImst
+# JHipster Example [IMST] Kurssystem 
 
 This application was generated using JHipster 5.8.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.8.2](https://www.jhipster.tech/documentation-archive/v5.8.2).
+
+## Database structure diagram
+
+![db structure diagram](https://raw.githubusercontent.com/philippneurauter/jhipster-example-kurssystem/master/jhipster-jdl.png "JHipster DB Structure")
+
 
 ## Development
 
